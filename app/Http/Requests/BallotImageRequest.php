@@ -25,7 +25,7 @@ class BallotImageRequest extends FormRequest
     {
         return [
             'sender_mac_address' => 'required|regex:/^([0-9A-F]{2}[:-]){5}([0-9A-F]{2})$/i',
-            'image' => 'required|image|mimes:jpeg,png,jpg|max:4096'
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:8192|dimensions:height=3508,width=2480'
         ];
     }
 }

@@ -108,6 +108,7 @@
       <path value="$PROJECT_DIR$/vendor/lbhurtado/tactician" />
       <path value="$PROJECT_DIR$/vendor/propaganistas/laravel-phone" />
       <path value="$PROJECT_DIR$/vendor/joselfonseca/laravel-tactician" />
+      <path value="$PROJECT_DIR$/vendor/orlyapps/zbar-qrdecoder" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

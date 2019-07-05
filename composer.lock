@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bff579423a02926d871415488e95febf",
+    "content-hash": "55bbb80602d47efab2264e3e4f064489",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1981,6 +1981,62 @@
                 "serializable"
             ],
             "time": "2018-10-16T12:09:31+00:00"
+        },
+        {
+            "name": "orlyapps/zbar-qrdecoder",
+            "version": "3.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orlyapps/zbar-qrdecoder.git",
+                "reference": "bdfea658e1c8ca623b7e0d1e78c727bb24c7e4f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orlyapps/zbar-qrdecoder/zipball/bdfea658e1c8ca623b7e0d1e78c727bb24c7e4f7",
+                "reference": "bdfea658e1c8ca623b7e0d1e78c727bb24c7e4f7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "symfony/process": "^4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*@dev",
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "RobbieP\\ZbarQrdecoder\\ZbarQrdecoderServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "RobbieP\\ZbarQrdecoder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robbie Paul",
+                    "email": "robbiepaul@me.com"
+                }
+            ],
+            "description": "A PHP wrapper for Zbar. Decodes images/photos containing QR codes.",
+            "keywords": [
+                "decode",
+                "laravel",
+                "php",
+                "qr",
+                "qrcode",
+                "zbar"
+            ],
+            "time": "2019-02-28T14:12:41+00:00"
         },
         {
             "name": "paragonie/random_compat",

@@ -9,8 +9,9 @@ class ImageController extends Controller
 {
     public function store(BallotImageRequest $request)
     {
-        $image = Image::create($request->only(['sender_mac_address']));
-        $image->addMediaFromRequest('image')->toMediaCollection('ballots');
+        $image = tap(Image::create($request->only(['sender_mac_address'])), function ($img) {
+            $img->addMediaFromRequest('image')->toMediaCollection('ballots');
+        })->extractQRCode();
 
         return $image->with('media')->get();
     }
