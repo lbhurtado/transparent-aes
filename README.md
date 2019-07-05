@@ -9,4 +9,7 @@
 ### Process Image
 - extract qr_code from image
 
+### Persist Electronic Ballot
+- sync unique qr_code with ballot
+
 

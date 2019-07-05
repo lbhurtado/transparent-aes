@@ -16,7 +16,7 @@ class CreateImagesTable extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('sender_mac_address');
-            $table->string('qr_code')->nullable();
+            $table->string('qr_code')->nullable()->unique();
             $table->timestamps();
         });
     }

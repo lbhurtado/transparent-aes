@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Image;
+use LBHurtado\Ballot\Models\Ballot;
 use App\Http\Requests\BallotImageRequest;
 
 class ImageController extends Controller
@@ -13,6 +14,8 @@ class ImageController extends Controller
             $img->addMediaFromRequest('image')->toMediaCollection('ballots');
         })->extractQRCode();
 
-        return $image->with('media')->get();
+        $ballot = Ballot::updateOrCreate(['code' => $image->qr_code], ['image' => $image->getFirstMediaUrl('ballots')]);
+
+        return $ballot->with('positions')->get();
     }
 }
