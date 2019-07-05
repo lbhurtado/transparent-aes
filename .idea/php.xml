@@ -83,6 +83,31 @@
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/league/glide" />
+      <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
+      <path value="$PROJECT_DIR$/vendor/spatie/pdf-to-image" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/spatie/image" />
+      <path value="$PROJECT_DIR$/vendor/spatie/temporary-directory" />
+      <path value="$PROJECT_DIR$/vendor/spatie/image-optimizer" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-medialibrary" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/league/iso3166" />
+      <path value="$PROJECT_DIR$/vendor/league/tactician" />
+      <path value="$PROJECT_DIR$/vendor/giggsey/locale" />
+      <path value="$PROJECT_DIR$/vendor/giggsey/libphonenumber-for-php" />
+      <path value="$PROJECT_DIR$/vendor/lbhurtado/common" />
+      <path value="$PROJECT_DIR$/vendor/lbhurtado/ballot" />
+      <path value="$PROJECT_DIR$/vendor/opis/routing" />
+      <path value="$PROJECT_DIR$/vendor/opis/pattern" />
+      <path value="$PROJECT_DIR$/vendor/libern/qr-code-reader" />
+      <path value="$PROJECT_DIR$/vendor/opis/events" />
+      <path value="$PROJECT_DIR$/vendor/khanamiryan/qrcode-detector-decoder" />
+      <path value="$PROJECT_DIR$/vendor/lbhurtado/tactician" />
+      <path value="$PROJECT_DIR$/vendor/propaganistas/laravel-phone" />
+      <path value="$PROJECT_DIR$/vendor/joselfonseca/laravel-tactician" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
