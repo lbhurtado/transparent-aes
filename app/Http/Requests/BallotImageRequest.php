@@ -6,6 +6,8 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class BallotImageRequest extends FormRequest
 {
+    const IMAGE_FIELD = 'image';
+
     /**
      * Determine if the user is authorized to make this request.
      *
