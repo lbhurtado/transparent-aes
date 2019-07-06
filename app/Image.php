@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use App\Http\Requests\BallotImageRequest as Request;
+use LBHurtado\BallotOMR\Facades\BallotOMR; //TODO: put this in a job
 
 //TODO: make this a package
 class Image extends Model implements HasMedia
@@ -19,6 +20,9 @@ class Image extends Model implements HasMedia
         'sender_mac_address',
         'qr_code',
     ];
+
+    /** @var array */
+    protected $markings = [];
 
     public function registerMediaCollections()
     {
@@ -52,5 +56,20 @@ class Image extends Model implements HasMedia
         return tap(static::firstOrCreate($request->only(['sender_mac_address'])), function ($img) {
             $img->addMediaFromRequest(Request::IMAGE_FIELD)->toMediaCollection(static::MEDIA_COLLECTION);
         });
+    }
+
+    public function processMarkings()
+    {
+       tap(BallotOMR::setImage($this->path), function (\LBHurtado\BallotOMR\Drivers\Driver $omr) {
+           $omr->process();
+           $this->markings = $omr->getResults();
+        });
+
+        return $this;
+    }
+
+    public function getMarkings()
+    {
+        return $this->markings;
     }
 }

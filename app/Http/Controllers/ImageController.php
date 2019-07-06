@@ -5,16 +5,15 @@ namespace App\Http\Controllers;
 use App\Image;
 use LBHurtado\Ballot\Models\Ballot;
 use App\Http\Requests\BallotImageRequest;
-use LBHurtado\BallotOMR\Facades\BallotOMR; //TODO: put this in a job
 
 class ImageController extends Controller
 {
     public function store(BallotImageRequest $request)
     {
-        $image = Image::persist($request)->transfuseQRCode();
+        $image = Image::persist($request)->transfuseQRCode()->processMarkings();
         $ballot = Ballot::updateOrCreate(['code' => $image->qr_code], ['image' => $image->url]);
 
-        BallotOMR::setImage($image->path)->process();
+        dd($image->getMarkings());
 
         return $ballot->with('positions')->get();
     }

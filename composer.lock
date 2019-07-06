@@ -1107,12 +1107,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lbhurtado/ballot-omr.git",
-                "reference": "7868dd46365ff37b88ddc0d7e26753a6a696e62e"
+                "reference": "3b70ca36b7dc3a9b1f4c74019538403d132059e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lbhurtado/ballot-omr/zipball/7868dd46365ff37b88ddc0d7e26753a6a696e62e",
-                "reference": "7868dd46365ff37b88ddc0d7e26753a6a696e62e",
+                "url": "https://api.github.com/repos/lbhurtado/ballot-omr/zipball/3b70ca36b7dc3a9b1f4c74019538403d132059e6",
+                "reference": "3b70ca36b7dc3a9b1f4c74019538403d132059e6",
                 "shasum": ""
             },
             "require": {
@@ -1158,7 +1158,7 @@
                 "lbhurtado",
                 "omr"
             ],
-            "time": "2019-07-04T11:59:25+00:00"
+            "time": "2019-07-06T07:25:16+00:00"
         },
         {
             "name": "lbhurtado/common",
@@ -1227,12 +1227,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lbhurtado/simple-omr.git",
-                "reference": "90c294f1be3c4350f1e61206bc9b353b1f670ff0"
+                "reference": "a0b9d4a37908d3b17790d9b25f432491ced98bf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lbhurtado/simple-omr/zipball/90c294f1be3c4350f1e61206bc9b353b1f670ff0",
-                "reference": "90c294f1be3c4350f1e61206bc9b353b1f670ff0",
+                "url": "https://api.github.com/repos/lbhurtado/simple-omr/zipball/a0b9d4a37908d3b17790d9b25f432491ced98bf5",
+                "reference": "a0b9d4a37908d3b17790d9b25f432491ced98bf5",
                 "shasum": ""
             },
             "require": {
@@ -1257,10 +1257,7 @@
             "autoload": {
                 "psr-4": {
                     "LBHurtado\\SimpleOMR\\": "src"
-                },
-                "classmap": [
-                    "src/SimpleOMRPHP.php"
-                ]
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1279,7 +1276,7 @@
                 "lbhurtado",
                 "simpleomr"
             ],
-            "time": "2019-07-06T02:41:21+00:00"
+            "time": "2019-07-06T04:49:57+00:00"
         },
         {
             "name": "lbhurtado/tactician",
