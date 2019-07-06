@@ -7,9 +7,13 @@
 - validate image
 
 ### Process Image
-- extract qr_code from image
+- transfuse qr_code from image to model
 
 ### Persist Electronic Ballot
 - sync unique qr_code with ballot
+
+### Appreciate Ballot Image
+- OMR processing
+
 
 

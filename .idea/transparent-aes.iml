@@ -28,7 +28,9 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/tinker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/lbhurtado/ballot" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/lbhurtado/ballot-omr" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/lbhurtado/common" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/lbhurtado/simple-omr" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/lbhurtado/tactician" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/flysystem" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/glide" />

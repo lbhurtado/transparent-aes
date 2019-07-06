@@ -13,6 +13,7 @@
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
         "lbhurtado/ballot": "^1.2",
+        "lbhurtado/ballot-omr": "dev-master",
         "orlyapps/zbar-qrdecoder": "^3.0",
         "spatie/laravel-medialibrary": "^7.6"
     },

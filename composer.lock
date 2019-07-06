@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "55bbb80602d47efab2264e3e4f064489",
+    "content-hash": "90d6ebc8ffb86a333854c40bb7378aed",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1102,6 +1102,65 @@
             "time": "2019-06-19T01:01:45+00:00"
         },
         {
+            "name": "lbhurtado/ballot-omr",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lbhurtado/ballot-omr.git",
+                "reference": "7868dd46365ff37b88ddc0d7e26753a6a696e62e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lbhurtado/ballot-omr/zipball/7868dd46365ff37b88ddc0d7e26753a6a696e62e",
+                "reference": "7868dd46365ff37b88ddc0d7e26753a6a696e62e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.8.*",
+                "lbhurtado/simple-omr": "dev-master",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.8.*",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LBHurtado\\BallotOMR\\BallotOMRServiceProvider"
+                    ],
+                    "aliases": {
+                        "BallotOMR": "LBHurtado\\BallotOMR\\Facades\\BallotOMR"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LBHurtado\\BallotOMR\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lester Hurtado",
+                    "email": "lester@hurtado.ph",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Driver-based OMR component for the lbhurtado/ballot package",
+            "homepage": "https://github.com/lbhurtado/ballot-omr",
+            "keywords": [
+                "ballot",
+                "lbhurtado",
+                "omr"
+            ],
+            "time": "2019-07-04T11:59:25+00:00"
+        },
+        {
             "name": "lbhurtado/common",
             "version": "1.2.0",
             "source": {
@@ -1161,6 +1220,66 @@
                 "lbhurtado"
             ],
             "time": "2019-06-07T04:24:33+00:00"
+        },
+        {
+            "name": "lbhurtado/simple-omr",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lbhurtado/simple-omr.git",
+                "reference": "90c294f1be3c4350f1e61206bc9b353b1f670ff0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lbhurtado/simple-omr/zipball/90c294f1be3c4350f1e61206bc9b353b1f670ff0",
+                "reference": "90c294f1be3c4350f1e61206bc9b353b1f670ff0",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.8.*",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.8.*",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LBHurtado\\SimpleOMR\\SimpleOMRServiceProvider"
+                    ],
+                    "aliases": {
+                        "SimpleOMR": "LBHurtado\\SimpleOMR\\SimpleOMRFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LBHurtado\\SimpleOMR\\": "src"
+                },
+                "classmap": [
+                    "src/SimpleOMRPHP.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lester Hurtado",
+                    "email": "lester@hurtado.ph",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple OMR driver for the lbhurtado/ballot-omr manager",
+            "homepage": "https://github.com/lbhurtado/simple-omr",
+            "keywords": [
+                "lbhurtado",
+                "simpleomr"
+            ],
+            "time": "2019-07-06T02:41:21+00:00"
         },
         {
             "name": "lbhurtado/tactician",
@@ -6108,7 +6227,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "lbhurtado/ballot-omr": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
