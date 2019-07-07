@@ -7,5 +7,5 @@ return [
     'mapPath' => storage_path('app/public/omr.json'),
     'tolerance' => 35,
     'debugFilePath' => storage_path('app/public'),
-    'debugFileName' => 'debug.jpg',
+    'debugFileName' => 'debug-filled-2.jpg',
 ];

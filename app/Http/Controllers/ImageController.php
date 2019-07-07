@@ -33,7 +33,9 @@ class ImageController extends Controller
 
     protected function getImageFromRequest(BallotImageRequest $request)
     {
-        return Image::persist($request)->transfuseQRCode()->processMarkings();
+        $image = Image::persist($request)->deskew()->transfuseQRCode()->processMarkings();
+
+        return $image;
     }
 
     protected function getBallotFromImage(Image $image)

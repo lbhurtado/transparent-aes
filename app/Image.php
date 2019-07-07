@@ -72,4 +72,16 @@ class Image extends Model implements HasMedia
     {
         return $this->markings;
     }
+
+    public function deskew($threshold = 100) {
+        $imagick = new \Imagick($this->path);
+        $imagick->deskewImage($threshold);
+        $imagick->trimImage(0);
+        $imagick->resizeImage(2480, 3508, \Imagick::FILTER_CATROM, -1);
+
+//        $imagick->cropImage(2480, 3508, 0,0);
+        $imagick->writeImage();
+
+        return $this;
+    }
 }
