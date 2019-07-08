@@ -4,8 +4,8 @@
  * You can place your custom package configuration in here.
  */
 return [
-    'mapPath' => storage_path('app/public/omr.json'),
+    'mapPath' => storage_path('app/public/generated-omr.json'),
     'tolerance' => 35,
     'debugFilePath' => storage_path('app/public'),
-    'debugFileName' => 'debug-filled-2.jpg',
+    'debugFileName' => 'debug.jpg',
 ];

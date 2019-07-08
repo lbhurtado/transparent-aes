@@ -68,9 +68,27 @@ class Image extends Model implements HasMedia
         return $this;
     }
 
-    public function getMarkings()
+    public function getMarkings(int $test = 0)
     {
-        return $this->markings;
+        if (!$test)
+            return $this->markings;
+
+        $markings = [];
+
+        switch ($test) {
+            case 1:
+                $markings = [
+                    'President' => 'BUENAFLOR',
+                    'Vice-President' => 'JIMENEZ',
+                ];
+                break;
+            
+            default:
+                # code...
+                break;
+        }
+
+        return $markings;
     }
 
     public function deskew($threshold = 100) {

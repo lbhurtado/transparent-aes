@@ -15,7 +15,7 @@ class ImageController extends Controller
         $image = $this->getImageFromRequest($request);
         $ballot = $this->getBallotFromImage($image);
 
-//        dd($image->getMarkings());
+       dd($image->getMarkings());
         foreach ($image->getMarkings() as $group_id => $candidate_code) {
             if ($candidate = Candidate::where('code', $candidate_code)->first()){
                 $ar = explode(':', $group_id);
