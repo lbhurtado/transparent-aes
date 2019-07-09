@@ -14,6 +14,7 @@
 
 ### Appreciate Ballot Image
 - OMR processing
+- OMR map generation
 
 
 
