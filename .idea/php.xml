@@ -111,6 +111,7 @@
       <path value="$PROJECT_DIR$/vendor/orlyapps/zbar-qrdecoder" />
       <path value="$PROJECT_DIR$/vendor/lbhurtado/simple-omr" />
       <path value="$PROJECT_DIR$/vendor/lbhurtado/ballot-omr" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-schemaless-attributes" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

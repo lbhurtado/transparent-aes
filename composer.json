@@ -15,7 +15,8 @@
         "lbhurtado/ballot": "^1.2",
         "lbhurtado/ballot-omr": "dev-master",
         "orlyapps/zbar-qrdecoder": "^3.0",
-        "spatie/laravel-medialibrary": "^7.6"
+        "spatie/laravel-medialibrary": "^7.6",
+        "spatie/laravel-schemaless-attributes": "^1.4"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

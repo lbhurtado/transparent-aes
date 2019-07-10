@@ -8,6 +8,7 @@ use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use App\Http\Requests\BallotImageRequest as Request;
 use LBHurtado\BallotOMR\Facades\BallotOMR; //TODO: put this in a job
+use Spatie\SchemalessAttributes\SchemalessAttributes;
 
 //TODO: make this a package
 class Image extends Model implements HasMedia
@@ -21,8 +22,12 @@ class Image extends Model implements HasMedia
         'qr_code',
     ];
 
+    public $casts = [
+        'extra_attributes' => 'array',
+    ];
+
     /** @var array */
-    protected $markings = [];
+//    protected $markings = [];
 
     public function registerMediaCollections()
     {
@@ -62,44 +67,38 @@ class Image extends Model implements HasMedia
     {
        tap(BallotOMR::setImage($this->path), function (\LBHurtado\BallotOMR\Drivers\Driver $omr) {
            $omr->process();
-           $this->markings = $omr->getResults();
+           $this->extra_attributes['markings'] = $omr->getResults();
+           $this->save();
         });
 
         return $this;
     }
 
-    public function getMarkings(int $test = 0)
+    public function getMarkingsAttribute($value)
     {
-        if (!$test)
-            return $this->markings;
-
-        $markings = [];
-
-        switch ($test) {
-            case 1:
-                $markings = [
-                    'President' => 'BUENAFLOR',
-                    'Vice-President' => 'JIMENEZ',
-                ];
-                break;
-
-            default:
-                # code...
-                break;
-        }
-
-        return $markings;
+        return $this->extra_attributes['markings'];
     }
 
-    public function deskew($threshold = 100) {
+    public function deskew($threshold = 40) {
         $imagick = new \Imagick($this->path);
-//        $imagick->deskewImage($threshold);
+        $imagick->deskewImage($threshold);
 //        $imagick->trimImage(0);
-//        $imagick->resizeImage(2480, 3508, \Imagick::FILTER_CATROM, -1);
+        $imagick->resizeImage(2480, 3508, \Imagick::FILTER_CATROM, -1);
 
 //        $imagick->cropImage(2480, 3508, 0,0);
+        $imagick->contrastImage(100);
         $imagick->writeImage();
 
         return $this;
+    }
+
+    public function getExtraAttributesAttribute(): SchemalessAttributes
+    {
+        return SchemalessAttributes::createForModel($this, 'extra_attributes');
+    }
+
+    public function scopeWithExtraAttributes(): Builder
+    {
+        return SchemalessAttributes::scopeWithSchemalessAttributes('extra_attributes');
     }
 }

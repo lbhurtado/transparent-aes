@@ -17,6 +17,7 @@ class CreateImagesTable extends Migration
             $table->bigIncrements('id');
             $table->string('sender_mac_address');
             $table->string('qr_code')->nullable()->unique();
+            $table->schemalessAttributes('extra_attributes');
             $table->timestamps();
         });
     }
