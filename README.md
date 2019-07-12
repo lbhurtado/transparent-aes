@@ -11,10 +11,14 @@
 
 ### Persist Electronic Ballot
 - sync unique qr_code with ballot
+- save image in storage
+- post image storage path in database
 
 ### Appreciate Ballot Image
+- Image processing
 - OMR processing
 - OMR map generation
+
 
 
 

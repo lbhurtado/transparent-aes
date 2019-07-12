@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94cb7fb7-63d5-4f86-bcbd-364a521fad62" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/ballot.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/screen.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/results.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/tally.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/transparent-aes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/transparent-aes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/ballot-image.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/GenerateOMRMap.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/GenerateOMRMap.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_05_140831_create_positions_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_05_140921_create_candidates_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_05_140931_create_ballots_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CandidateSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CandidateSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PositionSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PositionSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,15 +24,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/dashboard.blade.php">
+      <file leaf-file-name="GenerateOMRMap.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Console/Commands/GenerateOMRMap.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="86" selection-start-line="19" selection-start-column="86" selection-end-line="19" selection-end-column="86" />
+            <state relative-caret-position="133">
+              <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
               <folding>
-                <element signature="e#603#2650#0#HTML" />
-                <element signature="e#2667#5465#0#HTML" />
-                <element signature="e#5482#8794#0#HTML" />
+                <element signature="e#40#67#0#PHP" expanded="true" />
+                <element signature="e#1276#1317#0#PHP" />
+                <element signature="e#1120#1270#0#PHP" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ballot-image.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/ballot-image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+              <folding>
+                <element signature="e#58#185#1#PHP" />
+                <element signature="e#211#298#1#PHP" />
+                <element signature="e#318#410#1#PHP" />
+                <element signature="e#435#569#1#PHP" />
+                <element signature="e#595#812#1#PHP" />
+                <element signature="e#838#1055#1#PHP" />
+                <element signature="e#1081#1298#1#PHP" />
+                <element signature="e#1319#2628#1#PHP" />
+                <element signature="e#2649#3958#1#PHP" />
+                <element signature="e#3979#5350#1#PHP" />
+                <element signature="e#5371#6680#1#PHP" />
+                <element signature="e#6701#7941#1#PHP" />
+                <element signature="e#7962#9271#1#PHP" />
+                <element signature="e#9292#10532#1#PHP" />
+                <element signature="e#10553#11862#1#PHP" />
+                <element signature="e#11883#13123#1#PHP" />
+                <element signature="e#13145#14454#1#PHP" />
+                <element signature="e#14476#15716#1#PHP" />
+                <element signature="e#15738#17047#1#PHP" />
+                <element signature="e#17070#17143#1#PHP" />
+                <element signature="e#17160#17233#1#PHP" />
+                <element signature="e#17255#17360#1#PHP" />
+                <element signature="e#17383#17720#1#PHP" />
+                <element signature="e#17743#18080#1#PHP" />
+                <element signature="e#18103#18440#1#PHP" />
+                <element signature="e#18463#18800#1#PHP" />
+                <element signature="e#18823#19160#1#PHP" />
+                <element signature="e#19183#19520#1#PHP" />
+                <element signature="e#19543#19880#1#PHP" />
+                <element signature="e#19903#20240#1#PHP" />
+                <element signature="e#20262#23156#1#PHP" />
               </folding>
             </state>
           </provider>
@@ -78,10 +109,8 @@
         <option value="$PROJECT_DIR$/storage/app/public/omr.json" />
         <option value="$PROJECT_DIR$/app/Http/Requests/BallotImageRequest.php" />
         <option value="$PROJECT_DIR$/config/simple-omr.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/storage/app/public/generated-omr.json" />
         <option value="$PROJECT_DIR$/vendor/lbhurtado/ballot-omr/src/Drivers/SimpleOMRDriver.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/GenerateOMRMap.php" />
         <option value="$PROJECT_DIR$/database/seeds/BallotSeeder.php" />
         <option value="$PROJECT_DIR$/app/Tally.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_07_09_170455_create_tallies_table.php" />
@@ -90,7 +119,6 @@
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/vendor/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/screen.blade.php" />
-        <option value="$PROJECT_DIR$/app/Image.php" />
         <option value="$PROJECT_DIR$/database/seeds/PositionSeeder.php" />
         <option value="$PROJECT_DIR$/resources/views/ballot.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/BallotController.php" />
@@ -101,6 +129,10 @@
         <option value="$PROJECT_DIR$/database/seeds/CandidateSeeder.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/app/Image.php" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/config/ballot-image.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/GenerateOMRMap.php" />
       </list>
     </option>
   </component>
@@ -264,20 +296,33 @@
             <path>
               <item name="transparent-aes" type="b2602c69:ProjectViewProjectNode" />
               <item name="transparent-aes" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Console" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="transparent-aes" type="b2602c69:ProjectViewProjectNode" />
               <item name="transparent-aes" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Console" type="462c0819:PsiDirectoryNode" />
+              <item name="Commands" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="transparent-aes" type="b2602c69:ProjectViewProjectNode" />
               <item name="transparent-aes" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transparent-aes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="transparent-aes" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transparent-aes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="transparent-aes" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -317,12 +362,12 @@
       <workItem from="1562333515585" duration="50123000" />
       <workItem from="1562601325642" duration="15136000" />
       <workItem from="1562675348724" duration="53243000" />
-      <workItem from="1562891202160" duration="5643000" />
+      <workItem from="1562891202160" duration="11304000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124145000" />
+    <option name="totallyTimeSpent" value="129806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -357,9 +402,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/omr.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/ballot.jpg" />
     <entry file="file://$PROJECT_DIR$/config/medialibrary.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -407,13 +449,6 @@
     <entry file="file://$PROJECT_DIR$/vendor/lbhurtado/simple-omr/src/SimpleOMRPHP.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/ballot-omr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -430,16 +465,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/storage/app/public/debug-filled-2.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="17" selection-start-line="17" selection-end-line="17" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/simple-omr.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -462,13 +487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/GenerateOMRMap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1189">
-          <caret line="1194" column="28" selection-start-line="1194" selection-start-column="28" selection-end-line="1194" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Ballot 0001-1234.jpg" />
     <entry file="file://$PROJECT_DIR$/vendor/lbhurtado/ballot/src/Models/Candidate.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -482,16 +500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Tally.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#23#50#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -589,27 +597,10 @@
     <entry file="file://$PROJECT_DIR$/storage/app/public/debug.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="85" column="60" selection-start-line="85" selection-start-column="60" selection-end-line="85" selection-end-column="60" />
-          <folding>
-            <element signature="e#23#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/imagick/imagick.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1920">
           <caret line="128" column="30" selection-start-line="128" selection-start-column="30" selection-end-line="128" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/app/public/generated-omr.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26490">
-          <caret line="1766" column="10" selection-start-line="1766" selection-start-column="10" selection-end-line="1766" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -659,14 +650,117 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Tally.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#23#50#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="86" selection-start-line="19" selection-start-column="86" selection-end-line="19" selection-end-column="86" />
+        <state relative-caret-position="45">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
           <folding>
             <element signature="e#603#2650#0#HTML" />
             <element signature="e#2667#5465#0#HTML" />
             <element signature="e#5482#8794#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/ballot-omr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/app/public/generated-omr.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21691">
+          <caret line="1766" column="10" selection-start-line="1766" selection-start-column="10" selection-end-line="1766" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="210">
+            <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="978">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
+          <folding>
+            <element signature="e#23#50#0#PHP" expanded="true" />
+            <element signature="e#724#851#0#PHP" />
+            <element signature="e#857#1208#0#PHP" />
+            <element signature="e#1214#1330#0#PHP" />
+            <element signature="e#1336#1454#0#PHP" />
+            <element signature="e#1488#1766#0#PHP" />
+            <element signature="e#2060#2179#0#PHP" />
+            <element signature="e#2185#2297#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/ballot-image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <folding>
+            <element signature="e#58#185#1#PHP" />
+            <element signature="e#211#298#1#PHP" />
+            <element signature="e#318#410#1#PHP" />
+            <element signature="e#435#569#1#PHP" />
+            <element signature="e#595#812#1#PHP" />
+            <element signature="e#838#1055#1#PHP" />
+            <element signature="e#1081#1298#1#PHP" />
+            <element signature="e#1319#2628#1#PHP" />
+            <element signature="e#2649#3958#1#PHP" />
+            <element signature="e#3979#5350#1#PHP" />
+            <element signature="e#5371#6680#1#PHP" />
+            <element signature="e#6701#7941#1#PHP" />
+            <element signature="e#7962#9271#1#PHP" />
+            <element signature="e#9292#10532#1#PHP" />
+            <element signature="e#10553#11862#1#PHP" />
+            <element signature="e#11883#13123#1#PHP" />
+            <element signature="e#13145#14454#1#PHP" />
+            <element signature="e#14476#15716#1#PHP" />
+            <element signature="e#15738#17047#1#PHP" />
+            <element signature="e#17070#17143#1#PHP" />
+            <element signature="e#17160#17233#1#PHP" />
+            <element signature="e#17255#17360#1#PHP" />
+            <element signature="e#17383#17720#1#PHP" />
+            <element signature="e#17743#18080#1#PHP" />
+            <element signature="e#18103#18440#1#PHP" />
+            <element signature="e#18463#18800#1#PHP" />
+            <element signature="e#18823#19160#1#PHP" />
+            <element signature="e#19183#19520#1#PHP" />
+            <element signature="e#19543#19880#1#PHP" />
+            <element signature="e#19903#20240#1#PHP" />
+            <element signature="e#20262#23156#1#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/GenerateOMRMap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+          <folding>
+            <element signature="e#40#67#0#PHP" expanded="true" />
+            <element signature="e#1276#1317#0#PHP" />
+            <element signature="e#1120#1270#0#PHP" />
           </folding>
         </state>
       </provider>

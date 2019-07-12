@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Support\Arr;
 use RobbieP\ZbarQrdecoder\ZbarDecoder;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
@@ -26,8 +27,8 @@ class Image extends Model implements HasMedia
         'extra_attributes' => 'array',
     ];
 
-    /** @var array */
-//    protected $markings = [];
+    /** @var \Imagick */
+    protected $imagick;
 
     public function registerMediaCollections()
     {
@@ -67,16 +68,21 @@ class Image extends Model implements HasMedia
     {
        tap(BallotOMR::setImage($this->path), function (\LBHurtado\BallotOMR\Drivers\Driver $omr) {
            $omr->process();
-           $this->extra_attributes['markings'] = $omr->getResults();
+           $this->markings = $omr->getResults();
            $this->save();
         });
 
         return $this;
     }
 
-    public function getMarkingsAttribute($value)
+    public function setMarkingsAttribute($value)
     {
-        return $this->extra_attributes['markings'];
+        Arr::set($this->extra_attributes, 'markings', $value);
+    }
+
+    public function getMarkingsAttribute()
+    {
+        return Arr::get($this->extra_attributes, 'markings');
     }
 
     public function deskew($threshold = 80) {

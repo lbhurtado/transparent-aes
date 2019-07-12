@@ -2,18 +2,6 @@
 
 @section('content')
     <div class="container">
-        {{--<div class="row no-gutters">--}}
-            {{--<div class="col-sm-12">--}}
-                {{--<table class="table table-sm table-dark">--}}
-                    {{--<tbody>--}}
-                    {{--<tr>--}}
-                        {{--<td>Ballot Id</td>--}}
-                        {{--<td>{{ $ballot->code }}</td>--}}
-                    {{--</tr>--}}
-                    {{--</tbody>--}}
-                {{--</table>--}}
-            {{--</div>--}}
-        {{--</div>--}}
         <div class="row no-gutters">
             <div class="col-sm-4">
                 <div class="row no-gutters text-center">
