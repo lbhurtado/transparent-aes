@@ -4,8 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Support\Arr;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Storage;
-use LBHurtado\Ballot\Models\{Position, Candidate};
+use LBHurtado\Ballot\Models\Position;
 
 class GenerateOMRMap extends Command
 {
@@ -36,9 +35,7 @@ class GenerateOMRMap extends Command
      */
     public function handle()
     {
-        Storage::put('generated-omr.json', $this->getOMRMapping());
-
-        $this->info('OMR map written!');
+        $this->writeOMRMap()->writeAnswerKey();
     }
 
     protected function getOMRMapping()
@@ -60,7 +57,8 @@ class GenerateOMRMap extends Command
         $positions->whereIn('id', [1,2,3,4,5,6,7,8,9,10,11])->each(function ($position) use (&$groups) {
             $mapping = config('ballot-image.mapping');
             for ($seat = 1; $seat <= $position->seats; $seat++) {
-                $group['groupname'] = $position->seats > 1 ? "{$position->name}:{$seat}": $position->name;
+//                $group['groupname'] = $position->seats > 1 ? "{$position->name}:{$seat}": $position->name;
+                $group['groupname'] = $position->seats > 1 ? "{$position->id}:{$seat}": $position->id;
                 $points = $mapping[$group['groupname']];
                 $group['grouptargets'] = [];
                 $position->candidates->each(function ($candidate) use (&$group, &$points) {
@@ -79,5 +77,41 @@ class GenerateOMRMap extends Command
         });
 
         return $groups;
+    }
+
+    protected function getAnswerKey()
+    {
+        $ar = [];
+        $positions = Position::all()->sortBy('id');
+        $positions->whereIn('id', [1,2,3,4,5,6,7,8,9,10,11])->each(function ($position) use (&$ar) {
+            for ($seat = 1; $seat <= $position->seats; $seat++) {
+                $position->candidates->each(function ($candidate) use ($position, &$ar, $seat) {
+                    $index = "{$position->id}.{$candidate->sequence}";
+                    Arr::set($ar, $index, $candidate->code);
+//                    $ar[$index] = $candidate->code;
+                });
+            }
+        });
+        $json = json_encode($ar,JSON_PRETTY_PRINT);
+
+        return $json;
+    }
+
+    protected function writeOMRMap(): GenerateOMRMap
+    {
+        $map = fopen(config('simple-omr.mapPath'), 'w');
+        fwrite($map, $this->getOMRMapping());
+        $this->info('OMR Map written!');
+
+        return $this;
+    }
+
+    protected function writeAnswerKey(): GenerateOMRMap
+    {
+        $file = fopen(config('app.answer_key'), 'w');
+        fwrite($file, $this->getAnswerKey());
+        $this->info('Answer Key written!');
+
+        return $this;
     }
 }

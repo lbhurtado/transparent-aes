@@ -12,5 +12,5 @@ return [
     */
     'default' => env('OMR_DRIVER', 'simple-omr'),
 
-    'simple-omr' => config('simple-omr')
+    'simple-omr' => config('simple-omr'),
 ];

@@ -134,6 +134,7 @@ return [
     |
     */
 
+    'answer_key' => env('ANSWER_KEY', 'answer-key.json'),
     'providers' => [
 
         /*
