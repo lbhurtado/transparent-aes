@@ -87,7 +87,7 @@ class Image extends Model implements HasMedia
 
     public function deskew($threshold = 80) {
         $imagick = new \Imagick($this->path);
-//        $imagick->deskewImage($threshold);
+        $imagick->deskewImage($threshold);
 //        $imagick->trimImage(0);
         $imagick->resizeImage(2480, 3508, \Imagick::FILTER_LANCZOS, -1);
 

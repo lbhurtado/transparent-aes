@@ -11,8 +11,8 @@
 |
 */
 
+use App\Tally;
 use LBHurtado\Ballot\Models\{Ballot, Position};
-
 
 Route::get('/', function () {
     return view('welcome');
@@ -42,17 +42,19 @@ Route::post('/ballot/candidate', 'BallotController@store')->name('ballot-candida
 Route::get('/tally', function() {
     $ballot_count = Ballot::all()->count();
     $positions = Position::all()->sortBy('id');
+//    $tallies = Tally::all()->groupBy('position');
+    $groups = Tally::all()->load('position', 'candidate')->groupBy('position.name');
     $index = 1;
 
     return response()
-        ->view('tally', compact('positions', 'ballot_count'), 200)
+        ->view('tally', compact('groups', 'positions', 'ballot_count'), 200)
         ->header('Content-Type', 'text/plain')
         ;
 })->name('status');
 Route::get('/results', function () {
-    $positions = Position::all()->sortBy('id');
+    $groups = Tally::all()->load('position', 'candidate')->groupBy('position.name');
 
-    return view('results', compact('positions'));
+    return view('results', compact('groups'));
 })->name('results');
 
 Route::get('/dashboard/ballot', function () {

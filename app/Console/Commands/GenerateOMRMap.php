@@ -58,10 +58,10 @@ class GenerateOMRMap extends Command
             $mapping = config('ballot-image.mapping');
             for ($seat = 1; $seat <= $position->seats; $seat++) {
 //                $group['groupname'] = $position->seats > 1 ? "{$position->name}:{$seat}": $position->name;
-                $group['groupname'] = $position->seats > 1 ? "{$position->id}:{$seat}": $position->id;
+                $group['groupname'] = $position->seats > 1 ? "{$position->id}:{$seat}": "{$position->id}";
                 $points = $mapping[$group['groupname']];
                 $group['grouptargets'] = [];
-                $position->candidates->each(function ($candidate) use (&$group, &$points) {
+                $position->candidates->each(function ($candidate) use (&$group, &$points, $position, $seat) {
                     $point = array_shift($points);
                     $group['grouptargets'][] = [
                         'x' => $point[0],
@@ -69,7 +69,8 @@ class GenerateOMRMap extends Command
                         'width' => self::MARKER_WIDTH,
                         'height' => self::MARKER_HEIGHT,
                         'type' => self::MARKER_TYPE,
-                        'id' => $candidate->code
+                        'id' => "{$position->id}:{$candidate->sequence}"
+//                        'id' => $candidate->code
                     ];
                 });
                 $groups[] = $group;

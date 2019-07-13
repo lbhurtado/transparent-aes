@@ -38,11 +38,20 @@ SQL;
     {
         return <<<SQL
 CREATE VIEW tallies AS 
-    select p.name as position, c.name as candidate, cast(sum(bc.votes) as unsigned) as votes, p.seats from ballot_candidate bc
-    inner join candidates c on c.id = bc.candidate_id
-    inner join positions p on p.id = c.position_id
-    group by bc.candidate_id
-    order by p.id, votes  desc
+select p.id as position_id, c.id as candidate_id, cast(sum(bc.votes) as unsigned) as votes from (
+	select `internal`.`ballot_id`, `internal`.`position_id`, `internal`.`candidate_id`, max(`internal`.`votes`) as votes from ballot_candidate as internal
+	group by 1,2,3
+) as bc
+inner join candidates c on c.id = bc.candidate_id
+inner join positions p on p.id = c.position_id
+group by bc.candidate_id
+order by p.id, votes  desc
 SQL;
     }
 }
+//
+//select p.name as position, c.name as candidate, cast(sum(bc.votes) as unsigned) as votes, p.seats from ballot_candidate bc
+//    inner join candidates c on c.id = bc.candidate_id
+//    inner join positions p on p.id = c.position_id
+//    group by bc.candidate_id
+//    order by p.id, votes  desc
