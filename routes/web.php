@@ -70,3 +70,9 @@ Route::get('/dashboard/ballot', function () {
 
     return view('dashboard', compact('ballot', 'positions', 'col_1', 'col_2', 'col_3', 'board_members', 'councilors', 'party_list'));
 });
+
+Route::get('/tara', function () {
+    $groups = Tally::all()->load('position', 'candidate')->groupBy('position.name');
+
+    return view('tara', compact('groups'));
+})->name('tara');

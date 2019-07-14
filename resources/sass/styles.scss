@@ -1,0 +1,10 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url('/public/fonts/TallyMark.ttf');
+}
+.tally_font{
+    font-family: myFirstFont;
+    letter-spacing: 1px;
+    text-align: right;
+    padding-right: 5px;
+}

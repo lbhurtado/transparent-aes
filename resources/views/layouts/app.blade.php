@@ -76,5 +76,18 @@
             @yield('content')
         </main>
     </div>
+    <style type="text/css">
+        @font-face {
+            font-family: myFirstFont;
+            src: url('fonts/TallyMark.ttf');
+        }
+        .tally_font{
+            font-family: myFirstFont;
+            letter-spacing: 20px;
+            font-size: x-large;
+            text-align: left;
+            padding-right: 5px;
+        }
+    </style>
 </body>
 </html>

@@ -19,6 +19,10 @@
 - OMR processing
 - OMR map generation
 
+### Messaging
+- can send SMS
+
+
 
 
 

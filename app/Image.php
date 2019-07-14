@@ -66,7 +66,11 @@ class Image extends Model implements HasMedia
 
     public function processMarkings()
     {
-       tap(BallotOMR::setImage($this->path), function (\LBHurtado\BallotOMR\Drivers\Driver $omr) {
+        $preloaded_image_path = storage_path("app/preload/{$this->qr_code}.jpg");
+
+        $path = config('app.simulated_images') ? $preloaded_image_path : $this->path;
+
+        tap(BallotOMR::setImage($path), function (\LBHurtado\BallotOMR\Drivers\Driver $omr) {
            $omr->process();
            $this->markings = $omr->getResults();
            $this->save();

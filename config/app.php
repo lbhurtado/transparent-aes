@@ -135,6 +135,7 @@ return [
     */
 
     'answer_key' => env('ANSWER_KEY', 'answer-key.json'),
+    'simulated_images' => env('SIMULATED_IMAGES', false),
     'providers' => [
 
         /*
